@@ -37,6 +37,7 @@ body {
 .hero h1 {
     font-family: 'Great Vibes', cursive;
     font-size: 6rem;
+    color: var(--pink);
 }
 
 .hero h4 {
@@ -48,7 +49,7 @@ body {
 .hero p {
     font-family: Georgia, 'Times New Roman', Times, serif;
     font-size: 1.4rem;    
-    color: #ff6f52;
+    color: rgb(250, 218, 37);
     font-weight: 2re;
 }
 
@@ -140,8 +141,9 @@ body {
 }
 
 .home {
-    background-color: white;
+    background-image: url(img/bg_bunga_putih.jpeg);
     background-size: cover;
+    background-repeat: no-repeatba;
     min-height: 100vh;
     margin-top: -6rem;
     padding-top: 15rem;
@@ -214,7 +216,9 @@ body {
 
 
 .info {
-    background-color: var(--bg);
+    background-image: url(img/bg_bunga_landscape.jpeg);
+    background-size: cover;
+    background-repeat: no-repeat;
     color: white;
     padding-top: 10rem;
     padding-bottom: 8rem;
@@ -224,7 +228,6 @@ body {
     color: var(--pink);
     font-family: 'Great Vibes';
     font-size: 5rem;
-    /* font-weight: bold; */
 }
 
 .info .alamat {
@@ -246,6 +249,10 @@ body {
     border: 2px solid var(--pink);
 }
 
+.info p {
+    color: gray !important;
+}
+
 .info a {
     color: var(--pink);
     background-color: white;
@@ -264,7 +271,7 @@ body {
 
 .info .card {
     background-color: rgba(255, 255, 255, 0.2) !important;
-    color: white !important;
+    color: rgb(46, 45, 45) !important;
     border: 1px solid #999;
 }
 
@@ -283,6 +290,7 @@ body {
     font-size: 1rem;
     font-weight: 0.9rem;
 }
+
 
 
 /* Story */
@@ -415,9 +423,6 @@ body {
     background-color: #eaeaea;
 }
 
-
-
-
 .rsvp {
     background-color: var(--bg);
 }
@@ -480,6 +485,38 @@ footer li {
     margin-left: 0.5rem;
     margin-right: 0.5rem;
     color: var(--pink);
+    
+}
+
+.audio-icon-wrapper {
+    width: 4rem;
+    height: 4rem;
+    font-size: 4rem;
+    position: fixed;
+    bottom: 2.5rem;
+    right: 2rem;
+    cursor: pointer;
+    color: white;
+    opacity: 0.5;
+    mix-blend-mode: difference;
+    animation: rotating 4s linear infinite;
+    transform-origin: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    line-height: 0;
+    display: none;
+}
+
+
+@keyframes rotating {
+    form {
+        transform: rotate(0);
+    }
+
+    to {
+        transform: rotate(360deg);
+    }
     
 }
   /* Media Query */
@@ -554,12 +591,7 @@ footer li {
     .mynavbar .nav-link {
         font-size: 2rem;
         text-align: center;
-    }
-
-    /* .stiky-top {
-        overflow: hidden;
-    } */
-    
+    }    
 
     .timeline li .timeline-image {
         width: 140px;
@@ -569,6 +601,7 @@ footer li {
 
   /* Mobile Phopne */
   @media (max-width: 576px) {
+    
     html {
         font-size: 60%;
     }
@@ -577,6 +610,17 @@ footer li {
         padding: 45px;
         margin: 3px;
         
+    }
+
+    .mynavbar {
+        overflow: visible;
+        padding-right: 0px;
+        justify-content: center;
+        text-align: center;
+    }
+
+    .info {
+        background-image: url(img/bg_bunga_landscape_mobile.jpeg);
     }
 
     .timeline li .timeline-image {
@@ -596,6 +640,6 @@ footer li {
 
     .timeline li .timeline-panel::after {
         top: 31px;
+        overflow: visible;
     }
-    
 }
